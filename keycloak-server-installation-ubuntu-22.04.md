@@ -33,8 +33,7 @@ db-username=keycloak
 db-password=Keycloak@!123456788910
 db-url=jdbc:postgresql://localhost/keycloak
 
-# Observability
-# If the server should expose healthcheck endpoints and metrics endpoints.
+# Observability: If the server should expose healthcheck endpoints and metrics endpoints.
 health-enabled=true
 metrics-enabled=true
 
