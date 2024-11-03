@@ -21,6 +21,12 @@ sudo tar -xzvf keycloak.tar.gz keycloak --strip-components=1
 sudo rm keycloak.tar.gz
 ```
 
+Prepare the keycloak configuration file
+
+```console
+
+```
+
 Run keycloak as non root user
 
 ```console
