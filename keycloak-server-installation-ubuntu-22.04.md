@@ -30,3 +30,31 @@ sudo useradd -r -g keycloak -d /opt/keycloak -s /sbin/nologin keycloak
 sudo chown -R keycloak:keycloak /opt/keycloak
 sudo chmod 774 /opt/keycloak/bin
 ```
+
+Run keycloak as systemd service
+
+vim /etc/systemd/system/keycloak.service
+
+```console
+[Unit]
+Description=The Keycloak Server
+After=syslog.target network.target
+# Before=nginx.service
+
+[Service]
+User=keycloak
+Group=keycloak
+LimitNOFILE=102642
+PIDFile=/run/keycloak/keycloak.pid
+ExecStart=/opt/keycloak/bin/kc.sh start --optimized
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```console
+systemctl daemon-reload
+systemctl start keycloak
+systemctl status keycloak
+```
