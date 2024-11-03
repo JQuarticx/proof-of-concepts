@@ -29,6 +29,8 @@ sudo groupadd keycloak
 sudo useradd -r -g keycloak -d /opt/keycloak -s /sbin/nologin keycloak
 sudo chown -R keycloak:keycloak /opt/keycloak
 sudo chmod 774 /opt/keycloak/bin
+sudo mkdir -p /var/log/keycloak
+sudo chown -R keycloak:keycloak /var/log/keycloak
 ```
 
 Run keycloak as systemd service
@@ -47,7 +49,8 @@ Group=keycloak
 LimitNOFILE=102642
 PIDFile=/run/keycloak/keycloak.pid
 ExecStart=/opt/keycloak/bin/kc.sh start --optimized
-StandardOutput=null
+StandardOutput=file:/var/log/keycloak/standard.log
+StandardError=file:/var/log/keycloak/error.log
 
 [Install]
 WantedBy=multi-user.target
