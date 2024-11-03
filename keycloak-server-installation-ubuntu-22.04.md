@@ -8,7 +8,6 @@ sudo apt-get update
 sudo apt install curl wget vim -y
 sudo apt-get install default-jdk -y
 sudo apt install openjdk-21-jre -y
-# make sure jave is installed
 java -version
 ```
 
