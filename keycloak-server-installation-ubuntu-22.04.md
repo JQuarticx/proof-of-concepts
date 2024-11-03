@@ -120,3 +120,7 @@ sudo systemctl daemon-reload
 sudo systemctl start keycloak
 sudo systemctl status keycloak
 ```
+
+
+
+https://github.com/ivangfr/keycloak-clustered
