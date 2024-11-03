@@ -1,7 +1,7 @@
 keycloak-server-installation-ubuntu-22.04.md
 ---
 
-Architecture diagram 
+Architecture 
 
 ![image](https://github.com/user-attachments/assets/0042d73c-ceec-4d75-a858-b0106112826d)
 
