@@ -47,20 +47,24 @@ http-port=8080
 # https-certificate-file=${kc.home.dir}conf/server.crt.pem
 # The file path to a private key in PEM format.
 # https-certificate-key-file=${kc.home.dir}conf/server.key.pem
-# The proxy address forwarding mode if the server is behind a reverse proxy.
-# proxy=reencrypt
-proxy-headers=xforwarded
 
-# Do not attach route to cookies and rely on the session affinity capabilities from reverse proxy
-# spi-sticky-session-encoder-infinispan-should-attach-route=false
-
-# Hostname for the Keycloak server.
+# HOSTNAME INFO
+hostname-strict=true
+hostname-backchannel-dynamic=true
 hostname=https://sso.radianterp.in
 hostname-admin=https://admin-sso.radianterp.in
 
+# PROXY: The proxy address forwarding mode if the server is behind a reverse proxy.
+# proxy=reencrypt
+proxy-headers=xforwarded
+
 # LOGGING
+log=file
+log-file=/var/log/keycloak/events.log
 spi-events-listener-jboss-logging-success-level=info
 spi-events-listener-jboss-logging-error-level=info
+# Do not attach route to cookies and rely on the session affinity capabilities from reverse proxy
+# spi-sticky-session-encoder-infinispan-should-attach-route=false
 ```
 
 Run keycloak as non root user
