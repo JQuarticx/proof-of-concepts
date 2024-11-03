@@ -67,7 +67,7 @@ spi-events-listener-jboss-logging-error-level=info
 # spi-sticky-session-encoder-infinispan-should-attach-route=false
 ```
 
-Run keycloak as non root user
+Run keycloak service as non root user
 
 ```console
 sudo groupadd keycloak
