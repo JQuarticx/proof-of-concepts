@@ -25,6 +25,13 @@ sudo tar -xzvf keycloak.tar.gz keycloak --strip-components=1
 sudo rm keycloak.tar.gz
 ```
 
+Configure the postgresql as a service and create the credentials to store the keycloak data to the psql server.
+
+```console
+
+
+```
+
 Prepare the keycloak configuration file
 
 ```console
