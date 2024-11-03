@@ -25,7 +25,14 @@ sudo tar -xzvf keycloak.tar.gz keycloak --strip-components=1
 sudo rm keycloak.tar.gz
 ```
 
-Configure the postgresql as a service and create the credentials to store the keycloak data to the psql server.
+Configure Nginx as a service and create two virtual hosts to access Keycloak as a domain-based web console.
+
+```console
+
+
+```
+
+Configure PostgreSQL as a service and create the credentials to store Keycloak data in the PostgreSQL server.
 
 ```console
 
