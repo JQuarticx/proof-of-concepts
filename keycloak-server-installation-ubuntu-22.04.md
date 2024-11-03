@@ -82,8 +82,15 @@ sudo mkdir -p /var/log/keycloak
 sudo chown -R keycloak:keycloak /var/log/keycloak
 ```
 
-Run keycloak as systemd service
+Create the temp admin username and password to access the keycloak web console.
 
+```console
+/opt/keycloak/bin/kc.sh  bootstrap-admin user
+# Enter username [temp-admin]: xxx
+# Enter password [temp-admin]: xxx
+```
+
+Run keycloak as systemd service
 
 ```console
 # sudo vim /etc/systemd/system/keycloak.service
