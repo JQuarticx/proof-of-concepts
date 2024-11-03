@@ -27,8 +27,7 @@ Prepare the keycloak configuration file
 # sudo vim keycloak.conf
 # Basic settings for running in production. Change accordingly before deploying the server.
 
-# Database
-# The database vendor.
+# Database: The database vendor.
 db=postgres
 db-username=keycloak
 db-password=Keycloak@!123456788910
