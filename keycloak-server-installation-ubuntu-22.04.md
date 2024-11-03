@@ -52,7 +52,7 @@ http-port=8080
 proxy-headers=xforwarded
 
 # Do not attach route to cookies and rely on the session affinity capabilities from reverse proxy
-#spi-sticky-session-encoder-infinispan-should-attach-route=false
+# spi-sticky-session-encoder-infinispan-should-attach-route=false
 
 # Hostname for the Keycloak server.
 hostname=https://sso.radianterp.in
