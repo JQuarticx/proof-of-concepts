@@ -73,6 +73,9 @@ Run keycloak as non root user
 ```console
 sudo groupadd keycloak
 sudo useradd -r -g keycloak -d /opt/keycloak -s /sbin/nologin keycloak
+sudo cp /opt/keycloak/conf/keycloak.conf,/opt/keycloak/conf/keycloak.conf.backup
+sudo cp /opt/keycloak/conf/cache-ispn.xml /opt/keycloak/conf/cache-ispn.xml.backup
+sudo mv keycloak.conf /opt/keycloak/conf/keycloak.conf
 sudo chown -R keycloak:keycloak /opt/keycloak
 sudo chmod 774 /opt/keycloak/bin
 sudo mkdir -p /var/log/keycloak
