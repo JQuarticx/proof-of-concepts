@@ -24,6 +24,7 @@ sudo rm keycloak.tar.gz
 Prepare the keycloak configuration file
 
 ```console
+# sudo vim keycloak.conf
 # Basic settings for running in production. Change accordingly before deploying the server.
 
 # Database
