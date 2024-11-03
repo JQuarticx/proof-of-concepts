@@ -1,11 +1,13 @@
 keycloak-server-installation-ubuntu-22.04.md
 ---
 
-Architecture 
+Architecture
+
+In the architecture below, I plan to implement Keycloak as a service for an organization to securely manage identity and access processes. I have designed three services to handle their respective roles in the identity management system.
 
 ![image](https://github.com/user-attachments/assets/0042d73c-ceec-4d75-a858-b0106112826d)
 
-you need to install the dependencies for keycloak service
+You need to install the dependencies for the Keycloak service.
 
 ```console
 sudo apt-get update
