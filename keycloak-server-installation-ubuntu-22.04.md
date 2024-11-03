@@ -24,7 +24,44 @@ sudo rm keycloak.tar.gz
 Prepare the keycloak configuration file
 
 ```console
+# Basic settings for running in production. Change accordingly before deploying the server.
 
+# Database
+# The database vendor.
+db=postgres
+db-username=keycloak
+db-password=Keycloak@!123456788910
+db-url=jdbc:postgresql://localhost/keycloak
+
+# Observability
+# If the server should expose healthcheck endpoints and metrics endpoints.
+health-enabled=true
+metrics-enabled=true
+
+# HTTP
+http-enabled=true
+http-host=0.0.0.0
+http-port=8080
+
+# HTTPS
+# The file path to a server certificate or certificate chain in PEM format.
+# https-certificate-file=${kc.home.dir}conf/server.crt.pem
+# The file path to a private key in PEM format.
+# https-certificate-key-file=${kc.home.dir}conf/server.key.pem
+# The proxy address forwarding mode if the server is behind a reverse proxy.
+# proxy=reencrypt
+proxy-headers=xforwarded
+
+# Do not attach route to cookies and rely on the session affinity capabilities from reverse proxy
+#spi-sticky-session-encoder-infinispan-should-attach-route=false
+
+# Hostname for the Keycloak server.
+hostname=https://sso.radianterp.in
+hostname-admin=https://admin-sso.radianterp.in
+
+# LOGGING
+spi-events-listener-jboss-logging-success-level=info
+spi-events-listener-jboss-logging-error-level=info
 ```
 
 Run keycloak as non root user
