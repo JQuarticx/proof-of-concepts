@@ -33,9 +33,9 @@ sudo chmod 774 /opt/keycloak/bin
 
 Run keycloak as systemd service
 
-vim /etc/systemd/system/keycloak.service
 
 ```console
+# :vim /etc/systemd/system/keycloak.service
 [Unit]
 Description=The Keycloak Server
 After=syslog.target network.target
