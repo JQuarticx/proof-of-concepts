@@ -79,7 +79,7 @@ Run keycloak as systemd service
 
 
 ```console
-# :vim /etc/systemd/system/keycloak.service
+# sudo vim /etc/systemd/system/keycloak.service
 [Unit]
 Description=The Keycloak Server
 After=syslog.target network.target
@@ -99,7 +99,7 @@ WantedBy=multi-user.target
 ```
 
 ```console
-systemctl daemon-reload
-systemctl start keycloak
-systemctl status keycloak
+sudo systemctl daemon-reload
+sudo systemctl start keycloak
+sudo systemctl status keycloak
 ```
