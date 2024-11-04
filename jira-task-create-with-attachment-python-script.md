@@ -42,7 +42,6 @@ def create_jira_issue(project_key, summary, description, issue_type):
         print(f"Failed to create issue: {response.status}, {data.decode()}")
         return None
 
-
 def attach_file_to_issue(issue_key, file_path):
     """Attach a file to the specified Jira issue."""
     boundary = '-------boundary'
